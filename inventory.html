@@ -1,0 +1,21 @@
+---
+layout: default
+title: Quick Order Inventory
+---
+
+<h2>Inventory</h2>
+
+<!-- Inventory -->
+{% assign inventory = site.data.inventory %}
+{% assign inventory = inventory | sort:"Name" %}
+
+<!-- Document -->
+
+{% for item in inventory %}
+
+<ul>
+<li><strong>{{ item.Name }}</strong> ({{ item.Price }})</li>
+</ul>
+
+{% endfor %}
+
